@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -19,6 +20,7 @@ public class Widgets extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton radioButton;
 
+    Switch mySwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,16 @@ public class Widgets extends AppCompatActivity {
 
         // RadioButton method call
         radioButton();
+
+        mySwitch = findViewById(R.id.switch_button);
+
+        mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                String checked_status = String.valueOf(isChecked);
+                Toast.makeText(Widgets.this, "Switched state : " + checked_status, Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
     }

@@ -27,19 +27,36 @@
 
     <ImageButton
         android:paddingTop="30dp"
-        android:layout_width="150dp"
-        android:layout_height="152dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:src="@drawable/download"/>
 
-    <ImageView
-        android:paddingTop="30dp"
-        android:layout_width="150dp"
-        android:layout_height="152dp"
-        android:layout_gravity="center_horizontal"
+    <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_marginTop="20dp"
-        android:src="@drawable/download"/>
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_button_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+
+
+
+    </RadioGroup>
+
 
 
 

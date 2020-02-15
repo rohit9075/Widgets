@@ -6,6 +6,8 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -13,6 +15,9 @@ public class Widgets extends AppCompatActivity {
 
     CheckBox checkBox;
     ToggleButton toggleButton;
+
+    RadioGroup radioGroup;
+    RadioButton radioButton;
 
 
     @Override
@@ -25,7 +30,25 @@ public class Widgets extends AppCompatActivity {
         // Toggle button method call
         toggleButton();
 
+        // RadioButton method call
+        radioButton();
 
+
+    }
+
+    // RadioButton Method definition
+    private void radioButton() {
+        radioGroup = findViewById(R.id.radio_group);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                radioButton = findViewById(checkedId);
+                String  button_string = (String) radioButton.getText();
+                Toast.makeText(Widgets.this, "Checked id is : " + button_string , Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     // toggle button method definition

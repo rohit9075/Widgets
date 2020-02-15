@@ -3,6 +3,7 @@ package com.example.widgets;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,9 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-    String name;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
-    // Hnadling the customToastMessage Button click
+    // Handling the customToastMessage Button click
     public void customToastMessage(View view) {
 
         //LayoutInflater object to get access of layout resources
@@ -78,7 +76,10 @@ public class MainActivity extends AppCompatActivity {
         // Showing the message to user.
         toast.show();
 
+    }
 
-
+    public void goToWidgetsAcitivity(View view) {
+        Intent intent = new Intent(this, Widgets.class);
+        startActivity(intent);
     }
 }

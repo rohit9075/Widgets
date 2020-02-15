@@ -4,36 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_gravity="center_vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".Widgets">
 
-    <Button
+    <CheckBox
+        android:id="@+id/button_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simple Toast Message"
+        android:text="Select your setting"
         android:layout_marginTop="20dp"
-        android:onClick="simpleToast"
-        android:layout_gravity="center_horizontal" />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Custom Toast message"
-        android:layout_marginTop="20dp"
-        android:onClick="customToastMessage"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center_horizontal" />
 
-    <Button
+    <ToggleButton
+        android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Different Widgets"
-        android:layout_marginTop="20dp"
-        android:onClick="goToWidgetsAcitivity"
-        android:layout_marginBottom="20dp"
+        android:textOff="Off Stage"
+        android:textOn="On Stage"
         android:layout_gravity="center_horizontal"
-        tools:ignore="OnClick" />
+        />
 
 </LinearLayout>

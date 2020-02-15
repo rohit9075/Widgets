@@ -23,7 +23,24 @@
         android:layout_height="wrap_content"
         android:textOff="Off Stage"
         android:textOn="On Stage"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageButton
+        android:paddingTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="152dp"
         android:layout_gravity="center_horizontal"
-        />
+        android:layout_marginTop="20dp"
+        android:src="@drawable/download"/>
+
+    <ImageView
+        android:paddingTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/download"/>
+
+
 
 </LinearLayout>
